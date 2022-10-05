@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex flex-row justify-content-around">
+        <div>
+            <p>La dirección de email ingresada es valida.</p>
+            <h1>Direcciones de Correo: </h1>
+            <table class = "table boder border-2">
+                <tbody>
+                    {% for email in emails%}
+        
+                    <tr>
+                        <td>{{email['email']}}</td>
+                        <td>{{email['creado_en']}}</td>
+        
+                    </tr>
+                {%endfor%}    
+                </tbody>
+            </table>
+            <a href="/">Inicio</a>
+        </div>
+        
+    </div>
+</body>
+</html>
